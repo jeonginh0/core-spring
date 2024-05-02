@@ -10,26 +10,23 @@ import org.springframework.stereotype.Component;
 @Component
 public class OrderServiceImpl implements OrderService {
 
-    private MemberRepository memberRepository;
-    private DiscountPolicy discountPolicy;
+    @Autowired private MemberRepository memberRepository;
+    @Autowired private DiscountPolicy discountPolicy;
 
-    @Autowired
-    public void setMemberRepository(MemberRepository memberRepository) {
-        System.out.println("memberRepository = " + memberRepository);
-        this.memberRepository = memberRepository;
-    }
+//    public void setMemberRepository(MemberRepository memberRepository) {
+//        this.memberRepository = memberRepository;
+//    }
+//
+//
+//    public void setDiscountPolicy(DiscountPolicy discountPolicy) {
+//        this.discountPolicy = discountPolicy;
+//    }
 
-    @Autowired
-    public void setDiscountPolicy(DiscountPolicy discountPolicy) {
-        System.out.println("discountPolicy = " + discountPolicy);
-        this.discountPolicy = discountPolicy;
-    }
-
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-        System.out.println("1. OrderServiceImpl.OrderServiceImpl");
-        this.memberRepository = memberRepository;
-        this.discountPolicy = discountPolicy;
-    }
+//    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+//        System.out.println("1. OrderServiceImpl.OrderServiceImpl");
+//        this.memberRepository = memberRepository;
+//        this.discountPolicy = discountPolicy;
+//    }
 
     @Override
     public Order craeteOrder(Long memberId, String itemName, int itemPrice) {
