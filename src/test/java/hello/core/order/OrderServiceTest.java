@@ -32,14 +32,4 @@ public class OrderServiceTest {
         Order order = orderService.craeteOrder(memberId, "itemA", 10000);
         Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
     }
-
-    @Test
-    void fieldInjectiontest() {
-        OrderServiceImpl orderService = new OrderServiceImpl();
-
-//        orderService.craeteOrder(1L, "itemA", 10000); // null 포인터 이셉션이 터진다.
-//        orderService.setMemberRepository(new MemoryMemberRepository());
-//
-//        orderService.setDiscountPolicy(new FixDiscountPolicy());
-    }
 }
