@@ -8,9 +8,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class CoreApplicationTests {
 
-	@Autowired
-	MemberService memberService;
-
 	@Test
 	void contextLoads() {
 	}
