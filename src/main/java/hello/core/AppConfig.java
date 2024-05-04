@@ -43,7 +43,6 @@ public class AppConfig {
     }
 
     @Bean
-    @Qualifier("mainDiscountPolicy")
     public DiscountPolicy discountPolicy() {
         return new RateDiscountPolicy();
     }
