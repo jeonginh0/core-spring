@@ -36,6 +36,5 @@ public class SingletonTest {
         public void destroy() {
             System.out.println("SingletonBean.destroy");
         }
-
     }
 }
